@@ -1,39 +1,24 @@
-// TEXT
-// Il software deve chiedere per 10 volte all'utente di inserire un numero.
-// Il programma stampa la somma di tutti i numeri inseriti.
+// TEXT JSnack 5
+// Crea un array vuoto.
+// Chiedi per 6 volte all'utente di inserire un numero,
+// se è dispari inseriscilo nell'array.
 
-const sumVal = document.getElementById("sum"); // object | null
+let numbersArray = [ ];
 
-console.log(sumVal, typeof sumVal);
+console.log(numbersArray, typeof numbersArray);
 
-let sumInputs = 0;
+let nTimes = 6;
 
-let numArray = [];
+for ( i=0; i < nTimes; i++) {
 
-const nNum = 10;
+    const inputNum = parseInt(prompt(`Hello, User! Insert ${nTimes - i} numers.`));
 
-let i = 0;
+    if (inputNum % 2 !==0 ) {
 
-while (i < nNum) {
-
-    const inputNum = parseInt(prompt(`Hello, User! Insert ${nNum - i} numers.`));
-
-    console.log(inputNum, i+1, typeof inputNum);
-
-    if (!isNaN(inputNum)) {
-
-        sumInputs += inputNum;
-
-        console.log(sumInputs, typeof sumInputs);
-
-        i++;
-
-    } else {
-
-        alert("You must enter a number!");
+        numbersArray.push(inputNum)
 
     }
 
-}
+};
 
-sumVal.innerHTML = sumInputs;
+console.log(numbersArray, typeof numbersArray);
