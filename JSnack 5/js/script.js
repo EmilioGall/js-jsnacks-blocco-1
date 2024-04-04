@@ -9,7 +9,7 @@ console.log(numbersArray, typeof numbersArray);
 
 let nTimes = 6;
 
-for ( i=0; i < nTimes; i++) {
+for ( i = 0; i < nTimes; i++) {
 
     const inputNum = parseInt(prompt(`Hello, User! Insert ${nTimes - i} numers.`));
 

@@ -34,6 +34,6 @@ while (i < nNum) {
 
     }
 
-}
+};
 
 sumVal.innerHTML = sumInputs;

@@ -1,39 +1,13 @@
-// TEXT
-// Il software deve chiedere per 10 volte all'utente di inserire un numero.
-// Il programma stampa la somma di tutti i numeri inseriti.
+// TEXT JSnack6
+// Stampa il cubo dei primi N numeri,
+// dove N è un numero indicato dall'utente.
 
-const sumVal = document.getElementById("sum"); // object | null
+const inputNum = parseInt(prompt(`Hello, User! Insert a numer.`));
 
-console.log(sumVal, typeof sumVal);
+console.log(inputNum, "Input Number");
 
-let sumInputs = 0;
+for ( i = 1; i <= Math.floor(inputNum); i++) {
 
-let numArray = [];
+    console.log(Math.pow(i, 3));
 
-const nNum = 10;
-
-let i = 0;
-
-while (i < nNum) {
-
-    const inputNum = parseInt(prompt(`Hello, User! Insert ${nNum - i} numers.`));
-
-    console.log(inputNum, i+1, typeof inputNum);
-
-    if (!isNaN(inputNum)) {
-
-        sumInputs += inputNum;
-
-        console.log(sumInputs, typeof sumInputs);
-
-        i++;
-
-    } else {
-
-        alert("You must enter a number!");
-
-    }
-
-}
-
-sumVal.innerHTML = sumInputs;
+};
