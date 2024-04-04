@@ -1,39 +1,40 @@
-// TEXT
-// Il software deve chiedere per 10 volte all'utente di inserire un numero.
-// Il programma stampa la somma di tutti i numeri inseriti.
+// TEXT JSnack 4
+// In un array sono contenuti i nomi degli invitati alla festa del grande
+// Gatsby, chiedi all'utente il suo nome e comunicagli se può partecipare o
+// no alla festa.
 
-const sumVal = document.getElementById("sum"); // object | null
+const inputName = prompt(`Hello, User! Insert your name, please.`);
 
-console.log(sumVal, typeof sumVal);
+console.log(inputName, typeof inputName);
 
-let sumInputs = 0;
+let validNameArray = ["alpha", "beta", "gamma"];
 
-let numArray = [];
+let isFound = false;
 
-const nNum = 10;
+console.log(isFound, typeof isFound);
 
-let i = 0;
+for ( i=0; i < validNameArray.length; i++) {
 
-while (i < nNum) {
+    const validName = validNameArray[i];
 
-    const inputNum = parseInt(prompt(`Hello, User! Insert ${nNum - i} numers.`));
+    console.log(validName, typeof validName);
 
-    console.log(inputNum, i+1, typeof inputNum);
+    if (validName.toLocaleLowerCase === inputName.toLocaleLowerCase) {
 
-    if (!isNaN(inputNum)) {
-
-        sumInputs += inputNum;
-
-        console.log(sumInputs, typeof sumInputs);
-
-        i++;
-
-    } else {
-
-        alert("You must enter a number!");
+        isFound = true;
 
     }
 
-}
+};
 
-sumVal.innerHTML = sumInputs;
+console.log(isFound, typeof isFound);
+
+if (isFound == true) {
+
+    alert ("Access granted.")
+
+} else {
+
+    alert ("You can not pass!")
+
+}
