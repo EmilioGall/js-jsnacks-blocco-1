@@ -6,7 +6,7 @@ const inputNum = parseInt(prompt(`Hello, User! Insert a numer.`));
 
 console.log(inputNum, "Input Number");
 
-for ( i = 1; i <= Math.floor(inputNum); i++) {
+for (let i = 1; i <= Math.floor(inputNum); i++) {
 
     console.log(Math.pow(i, 3));
 

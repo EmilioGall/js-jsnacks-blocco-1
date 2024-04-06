@@ -13,7 +13,7 @@ let isFound = false;
 
 console.log(isFound, typeof isFound);
 
-for ( i=0; i < validNameArray.length; i++) {
+for (let i=0; i < validNameArray.length; i++) {
 
     const validName = validNameArray[i];
 
